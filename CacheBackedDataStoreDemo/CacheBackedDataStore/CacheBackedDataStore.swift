@@ -31,20 +31,24 @@ import Foundation
  }
  */
 
+struct CacheBackedDataSource<T> {
+  let localStore: LocalStore
+  let remoteStore: RemoteStore
+  
+  func find(_ objectID: String, completion: @escaping (Result<T, Error>) -> Void) {
+    
+  }
+}
+
 protocol LocalStore {
   associatedtype StoredObject
+
   func find(_ objectID: String, completion: @escaping (Result<StoredObject, Error>) -> Void)
   func persist(_ object: StoredObject)
 }
 
 protocol RemoteStore {
-  associatedtype TargetObject
+  associatedtype TargetObject: Decodable
+
   func find(_ objectID: String, completion: @escaping (Result<TargetObject, Error>) -> Void)
 }
-
-struct CacheBackedDataSource<T> {
-  func find(_ objectID: String, completion: @escaping (Result<T?, Error>) -> Void) {
-
-  }
-}
-
