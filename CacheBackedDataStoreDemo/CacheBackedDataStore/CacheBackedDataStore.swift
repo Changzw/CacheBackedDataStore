@@ -37,7 +37,22 @@ struct CacheBackedDataSource<Local: LocalStore, Remote: RemoteStore>
   let remoteStore: Remote
   
   func find(_ objectID: String, completion: @escaping (Result<Local.StoredObject, Error>) -> Void) {
-    
+    localStore.find(objectID) { result in
+      do {
+        let object = try result.get()
+        completion(.success(object))
+      } catch {
+        self.remoteStore.find(objectID) { result in
+          do {
+            let object = try result.get()
+            self.localStore.persist(object)
+            completion(.success(object))
+          } catch {
+            completion(.failure(error))
+          }
+        }
+      }
+    }
   }
 }
 
