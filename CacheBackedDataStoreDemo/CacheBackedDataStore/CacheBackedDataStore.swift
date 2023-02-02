@@ -31,11 +31,11 @@ import Foundation
  }
  */
 
-struct CacheBackedDataSource<T> {
-  let localStore: LocalStore
-  let remoteStore: RemoteStore
+struct CacheBackedDataSource<Local: LocalStore, Remote: RemoteStore> {
+  let localStore: Local
+  let remoteStore: Remote
   
-  func find(_ objectID: String, completion: @escaping (Result<T, Error>) -> Void) {
+  func find(_ objectID: String, completion: @escaping (Result<Local.StoredObject, Error>) -> Void) {
     
   }
 }
