@@ -31,7 +31,8 @@ import Foundation
  }
  */
 
-struct CacheBackedDataSource<Local: LocalStore, Remote: RemoteStore> {
+struct CacheBackedDataSource<Local: LocalStore, Remote: RemoteStore>
+  where Local.StoredObject == Remote.TargetObject {
   let localStore: Local
   let remoteStore: Remote
   
