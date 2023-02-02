@@ -11,7 +11,13 @@ final class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    let localUserStore = ArrayBackedUserStore()
+    let remoteUserStore = RemoteUserStore()
     
+    let cache = CacheBackedDataSource(localStore: localUserStore, remoteStore: remoteUserStore)
+    cache.find("someObjectId") { (result: Result<User, Error>) in
+
+    }
   }
 
 }

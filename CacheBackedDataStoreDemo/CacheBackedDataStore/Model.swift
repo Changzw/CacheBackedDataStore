@@ -15,17 +15,17 @@ struct User: Decodable {
 
 struct ArrayBackedUserStore: LocalStore {
   func find(_ objectID: String, completion: @escaping (Result<User, Error>) -> Void) {
-    
+    print(#function)
   }
   
   func persist(_ object: User) {
-    
+    print(#function)
   }
 }
 
 struct RemoteUserStore: RemoteStore {
   typealias TargetObject = User
   func find(_ objectID: String, completion: @escaping (Result<User, Error>) -> Void) {
-
+    print(#function)
   }
 }
