@@ -68,3 +68,4 @@ protocol RemoteStore {
 
   func find(_ objectID: String, completion: @escaping (Result<TargetObject, Error>) -> Void)
 }
+

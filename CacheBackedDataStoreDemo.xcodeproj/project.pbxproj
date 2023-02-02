@@ -14,6 +14,7 @@
 		070C4CA9298BAD990080C264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070C4CA8298BAD990080C264 /* Assets.xcassets */; };
 		070C4CAC298BAD990080C264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070C4CAA298BAD990080C264 /* LaunchScreen.storyboard */; };
 		070C4CB5298BADFD0080C264 /* CacheBackedDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C4CB4298BADFD0080C264 /* CacheBackedDataStore.swift */; };
+		070C4CB7298BB3C70080C264 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C4CB6298BB3C70080C264 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		070C4CAB298BAD990080C264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		070C4CAD298BAD990080C264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070C4CB4298BADFD0080C264 /* CacheBackedDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBackedDataStore.swift; sourceTree = "<group>"; };
+		070C4CB6298BB3C70080C264 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				070C4CB4298BADFD0080C264 /* CacheBackedDataStore.swift */,
+				070C4CB6298BB3C70080C264 /* Model.swift */,
 			);
 			path = CacheBackedDataStore;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070C4CB7298BB3C70080C264 /* Model.swift in Sources */,
 				070C4CA4298BAD970080C264 /* ViewController.swift in Sources */,
 				070C4CA0298BAD970080C264 /* AppDelegate.swift in Sources */,
 				070C4CB5298BADFD0080C264 /* CacheBackedDataStore.swift in Sources */,
