@@ -31,4 +31,9 @@ import Foundation
  }
  */
 
+struct CacheBackedDataSource<T> {
+  func find(_ objectID: String, completion: @escaping (Result<T?, Error>) -> Void) {
+
+  }
+}
 
